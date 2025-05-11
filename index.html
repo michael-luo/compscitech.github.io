@@ -3,24 +3,162 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Compsci Technologies, LLC</title>
+    <title>COMPSCI TECHNOLOGIES LLC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Favicon & Social Metadata -->
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="description" content="AI-powered software crafted with speed, logic, and purpose." />
+    <meta property="og:title" content="COMPSCI TECHNOLOGIES LLC" />
+    <meta property="og:description" content="AI-powered software crafted with speed, logic, and purpose." />
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:url" content="https://compsci.tech" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Visual + Interaction Styles -->
     <style>
-      body {
-        background-color: #0f0f0f;
-        color: #fafafa;
-        font-family: sans-serif;
-        text-align: center;
-        padding: 60px 20px;
+      :root {
+        --color-primary: #f43f5e;
+        --color-bg: #1a1a1a;
+        --color-text: #fafafa;
       }
-      a {
-        color: #f43f5e;
-        text-decoration: none;
+      body {
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        background-image: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.01) 0%, transparent 70%),
+          radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.01) 0%, transparent 70%);
+        background-size: 300px 300px;
+        background-repeat: repeat;
+        font-family: sans-serif;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background: linear-gradient(115deg, #f43f5e33, #1a1a1a, #f43f5e33);
+        background-size: 400% 400%;
+        animation: moveGradient 20s ease infinite;
+      }
+      @keyframes moveGradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      .glow-card {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.05), 0 4px 12px rgba(255, 255, 255, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        will-change: transform;
+      }
+      .glow-card:hover {
+        transform: rotate(-1deg) scale(1.02);
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.15), 0 6px 20px rgba(255, 255, 255, 0.1);
+      }
+      @keyframes pulseGlow {
+        0%, 100% {
+          box-shadow: 0 0 0 rgba(244, 63, 94, 0.5);
+        }
+        50% {
+          box-shadow: 0 0 20px rgba(244, 63, 94, 0.6);
+        }
+      }
+      .glow-pulse {
+        animation: pulseGlow 2s infinite;
       }
     </style>
   </head>
-  <body>
-    <h1>Compsci Technologies, LLC</h1>
-    <p>We build AI-powered apps like <strong>Glowrate</strong> to help users enhance their beauty and confidence through facial analysis, skincare, and digital wellness.</p>
-    <p>Contact us at <a href="mailto:team@compsci.tech">team@compsci.tech</a></p>
+  <body class="font-sans">
+
+    <!-- Hero -->
+    <section class="min-h-screen flex flex-col items-center justify-center text-center px-6 py-24">
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight">
+        COMPSCI TECHNOLOGIES LLC
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 max-w-2xl mb-8">
+        We build pragmatic, AI-powered software that solves real-world problems—fast, lean, and built to last.
+      </p>
+      <a
+        href="mailto:team@compsci.tech"
+        class="glow-pulse px-8 py-4 rounded-xl font-semibold transition"
+        style="background-color: #f43f5e; color: #fafafa;"
+      >
+        Contact Us
+      </a>
+
+      
+      <!-- Scroll Arrow -->
+    <div class="mt-12 animate-bounce opacity-70">
+      <div class="w-4 h-4 border-b-2 border-r-2 border-gray-400 rotate-45 mx-auto"></div>
+    </div>
+
+    </section>
+
+    <!-- About -->
+    <section class="min-h-[80vh] flex items-center justify-center bg-[#141414] px-6 text-center">
+      <div class="max-w-4xl">
+        <h2 class="text-3xl font-bold mb-6">About Us</h2>
+        <p class="text-lg md:text-xl text-gray-400 leading-relaxed">
+          COMPSCI TECHNOLOGIES LLC is an independent dev studio that ships practical software powered by AI and data.
+          From consumer apps to developer tools, we build lean, scalable systems with outcome-driven execution and zero bloat.
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="min-h-[80vh] flex flex-col justify-center px-6 py-20 text-center">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12">Featured Projects</h2>
+        <div class="grid gap-10 md:grid-cols-3">
+          <div class="bg-[#232323] rounded-xl p-6 border border-gray-800 glow-card">
+            <h3 class="text-xl font-bold text-[#f43f5e] mb-3">Glowrate</h3>
+            <p class="text-base md:text-lg text-gray-300 leading-relaxed">
+              An AI-powered experience that helps users understand and improve visual presence, wellness, and digital identity.
+            </p>
+          </div>
+
+          <div class="bg-[#232323] rounded-xl p-6 border border-gray-800 glow-card">
+            <h3 class="text-xl font-bold text-[#f43f5e] mb-3">GapMiner</h3>
+            <p class="text-base md:text-lg text-gray-300 leading-relaxed">
+              A data-driven research tool that identifies product gaps and market insights by analyzing public feedback at scale.
+            </p>
+          </div>
+
+          <div class="bg-[#232323] rounded-xl p-6 border border-gray-800 glow-card">
+            <h3 class="text-xl font-bold text-[#f43f5e] mb-3">SceneSpeak</h3>
+            <p class="text-base md:text-lg text-gray-300 leading-relaxed">
+              A visual-first language learning app that explains real-world objects and context using AI-powered scene analysis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="min-h-[80vh] flex items-center justify-center bg-[#141414] px-6 text-center">
+      <div class="max-w-xl">
+        <h2 class="text-3xl font-bold mb-6">Let’s Build the Future</h2>
+        <p class="text-lg md:text-xl text-gray-400 mb-8 leading-relaxed">
+          We’re open to collaboration, partnership, and experimentation. If you're exploring what’s next with AI, we should talk.
+        </p>
+        <a
+          href="mailto:team@compsci.tech"
+          class="glow-pulse px-8 py-4 rounded-xl font-semibold transition"
+          style="background-color: #f43f5e; color: #fafafa;"
+        >
+          Get in Touch
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-sm py-8 text-gray-500 bg-[#0f0f0f]">
+      © 2025 COMPSCI TECHNOLOGIES LLC — Built with logic.
+    </footer>
   </body>
 </html>
